@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ucapan Ulang Tahun</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Fungsi untuk mengarahkan ke halaman start.html jika nama belum disimpan di localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            var name = localStorage.getItem('name');
+            if (!name) {
+                window.location.href = 'start.html';
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="card">
+        <h1>Selamat Ulang Tahun!</h1>
+        <p>Semoga hari ini menjadi hari yang penuh kebahagiaan dan keceriaan untukmu <span id="name-placeholder"></span></p>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var name = localStorage.getItem('name');
+                if (name) {
+                    document.getElementById('name-placeholder').textContent = name;
+                }
+            });
+        </script>
+        <button id="ucapan-button" class="popup-button" onclick="showPopup('Selamat Ulang Tahun! Semoga kamu tetap awet muda, meskipun umur terus bertambah!'); disableButtons()">Ucapan Dari Saya</button>
+        <button id="doa-button" class="popup-button" onclick="showPopup('Doa terbaik untuk hari ulang tahunmu! Semoga panjang umur, sehat selalu, dan semoga kamu tetap bisa makan banyak tanpa khawatir berat badan!'); disableButtons()">Doa</button>
+        <button id="special-button" class="special-button" onclick="showSpecialPopup()">Tombol Istimewa</button>
+        <div id="popup" class="popup">
+            <p id="popup-message"></p>
+            <button class="popup-close-button" onclick="closePopup()">Tutup</button>
+        </div>
+        <div id="special-popup" class="special-popup">
+            <p id="special-popup-message">Apakah kamu yakin ingin mentraktir saya?</p>
+            <button class="special-popup-button" onclick="confirmYes()">Ya</button>
+            <button class="special-popup-button" onclick="confirmNo()">Tidak</button>
+        </div>
+        <div id="confirm-popup" class="confirm-popup">
+            <p>Apakah kamu yakin ingin mentraktir saya?</p>
+            <button class="confirm-popup-button" onclick="proceedToWhatsApp()">Terima Permintaan</button>
+            <button class="confirm-popup-button" onclick="showNewPopup('Kamu wajib traktir saya!')">Tolak Permintaan</button>
+        </div>
+    </div>
+    <footer class="footer" style="position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); font-size: 10px; color: rgb(55, 33, 252); font-family: 'Poppins', sans-serif;">
+        <p>&copy; <span id="current-year"></span> Aksara. All rights reserved.</p>
+    </footer>
+    <script>
+        // Fungsi untuk menampilkan popup dengan pesan tertentu
+        function showPopup(message) {
+            if (message) {
+                document.getElementById('popup-message').textContent = message;
+                document.getElementById('popup').style.display = 'block';
+            }
+        }
+
+        // Fungsi untuk menutup popup
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            enableButtons();
+        }
+
+        // Fungsi untuk menampilkan popup istimewa
+        function showSpecialPopup() {
+            document.getElementById('special-popup').style.display = 'block';
+        }
+
+        // Fungsi untuk konfirmasi "Ya" pada popup istimewa
+        function confirmYes() {
+            document.getElementById('special-popup').style.display = 'none';
+            document.getElementById('confirm-popup').style.display = 'block';
+        }
+
+        // Fungsi untuk konfirmasi "Tidak" pada popup istimewa
+        function confirmNo() {
+            var popup = document.getElementById('special-popup');
+            var randomX = Math.floor(Math.random() * (window.innerWidth - popup.offsetWidth));
+            var randomY = Math.floor(Math.random() * (window.innerHeight - popup.offsetHeight));
+            var maxX = window.innerWidth - popup.offsetWidth;
+            var maxY = window.innerHeight - popup.offsetHeight;
+
+            popup.style.left = Math.max(0, Math.min(randomX, maxX)) + 'px';
+            popup.style.top = Math.max(0, Math.min(randomY, maxY)) + 'px';
+        }
+
+        // Fungsi untuk mengarahkan ke WhatsApp setelah konfirmasi
+        function proceedToWhatsApp() {
+            window.location.href = "https://wa.me/6282220738427?text=Baiklah%20saya%20akan%20mentraktir%20kamu";
+        }
+
+        // Fungsi untuk mengatur tahun saat ini di footer dan mengatur posisi popup saat ukuran jendela berubah
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            window.addEventListener('resize', function() {
+                var popup = document.getElementById('popup');
+                var specialPopup = document.getElementById('special-popup');
+                var confirmPopup = document.getElementById('confirm-popup');
+                if (popup.style.display === 'block') {
+                    popup.style.left = (window.innerWidth - popup.offsetWidth) / 2 + 'px';
+                    popup.style.top = (window.innerHeight - popup.offsetHeight) / 2 + 'px';
+                }
+                if (specialPopup.style.display === 'block') {
+                    specialPopup.style.left = (window.innerWidth - specialPopup.offsetWidth) / 2 + 'px';
+                    specialPopup.style.top = (window.innerHeight - specialPopup.offsetHeight) / 2 + 'px';
+                }
+                if (confirmPopup.style.display === 'block') {
+                    confirmPopup.style.left = (window.innerWidth - confirmPopup.offsetWidth) / 2 + 'px';
+                    confirmPopup.style.top = (window.innerHeight - confirmPopup.offsetHeight) / 2 + 'px';
+                }
+            });
+        });
+
+        // Fungsi untuk menonaktifkan tombol Doa, Ucapan dari Saya, dan Tombol Istimewa serta mengubah warnanya menjadi abu-abu
+        function disableButtons() {
+            var doaButton = document.getElementById('doa-button');
+            var ucapanButton = document.getElementById('ucapan-button');
+            var specialButton = document.getElementById('special-button');
+            doaButton.disabled = true;
+            ucapanButton.disabled = true;
+            specialButton.disabled = true;
+            doaButton.style.backgroundColor = 'grey';
+            ucapanButton.style.backgroundColor = 'grey';
+            specialButton.style.backgroundColor = 'grey';
+        }
+
+        // Fungsi untuk mengaktifkan kembali tombol Doa, Ucapan dari Saya, dan Tombol Istimewa serta mengembalikan warnanya seperti semula
+        function enableButtons() {
+            var doaButton = document.getElementById('doa-button');
+            var ucapanButton = document.getElementById('ucapan-button');
+            var specialButton = document.getElementById('special-button');
+            doaButton.disabled = false;
+            ucapanButton.disabled = false;
+            specialButton.disabled = false;
+            doaButton.style.backgroundColor = '#ff4081';
+            ucapanButton.style.backgroundColor = '#ff4081';
+            specialButton.style.backgroundColor = '#ff4081';
+        }
+    </script>
+</body>
+</html>

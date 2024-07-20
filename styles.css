@@ -1,0 +1,138 @@
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #e0f7fa; /* Warna putih kebiruan */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 10px; /* Tambahkan padding untuk tampilan smartphone */
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 10px; /* Kurangi padding untuk tampilan smartphone */
+            text-align: center;
+            max-width: 100%; /* Sesuaikan lebar untuk tampilan smartphone */
+            width: 100%;
+            position: relative;
+        }
+        .card h1 {
+            color: #ff4081;
+            font-size: 20px; /* Kurangi ukuran font untuk tampilan smartphone */
+        }
+        .card p {
+            color: #555;
+            font-size: 14px; /* Kurangi ukuran font untuk tampilan smartphone */
+        }
+        .card button {
+            background-color: #ff4081;
+            color: #fff;
+            border: none;
+            padding: 8px 16px; /* Kurangi padding untuk tampilan smartphone */
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 14px; /* Kurangi ukuran font untuk tampilan smartphone */
+            margin-top: 8px; /* Kurangi margin untuk tampilan smartphone */
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+            margin-bottom: 8px;
+        }
+        .card button:hover {
+            background-color: #e91e63;
+        }
+        .popup {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 10px; /* Kurangi padding untuk tampilan smartphone */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            width: 80%; /* Sesuaikan lebar untuk tampilan smartphone */
+        }
+        .popup p {
+            color: #555;
+            font-size: 14px; /* Kurangi ukuran font untuk tampilan smartphone */
+        }
+        .popup button {
+            background-color: #ff4081;
+            color: #fff;
+            border: none;
+            padding: 8px 16px; /* Kurangi padding untuk tampilan smartphone */
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px; /* Kurangi ukuran font untuk tampilan smartphone */
+            margin-top: 8px; /* Kurangi margin untuk tampilan smartphone */
+            transition: background-color 0.3s;
+        }
+        .popup button:hover {
+            background-color: #e91e63;
+        }
+        .special-popup {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 10px; /* Kurangi padding untuk tampilan pop up istimewa */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            width: 70%; /* Perkecil lebar untuk tampilan pop up istimewa */
+        }
+        .special-popup p {
+            color: #555;
+            font-size: 12px; /* Kurangi ukuran font untuk tampilan pop up istimewa */
+        }
+        .special-popup button {
+            background-color: #ff4081;
+            color: #fff;
+            border: none;
+            padding: 5px 10px; /* Kurangi padding untuk tampilan pop up istimewa */
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px; /* Kurangi ukuran font untuk tampilan pop up istimewa */
+            margin-top: 5px; /* Kurangi margin untuk tampilan pop up istimewa */
+            transition: background-color 0.3s;
+        }
+        .special-popup button:hover {
+            background-color: #e91e63;
+        }
+        .confirm-popup {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 10px; /* Kurangi padding untuk tampilan smartphone */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            width: 80%; /* Sesuaikan lebar untuk tampilan smartphone */
+        }
+        .confirm-popup p {
+            color: #555;
+            font-size: 14px; /* Kurangi ukuran font untuk tampilan smartphone */
+        }
+        .confirm-popup button {
+            background-color: #ff4081;
+            color: #fff;
+            border: none;
+            padding: 8px 16px; /* Kurangi padding untuk tampilan smartphone */
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px; /* Kurangi ukuran font untuk tampilan smartphone */
+            margin-top: 8px; /* Kurangi margin untuk tampilan smartphone */
+            transition: background-color 0.3s;
+        }
+        .confirm-popup button:hover {
+            background-color: #e91e63;
+        }

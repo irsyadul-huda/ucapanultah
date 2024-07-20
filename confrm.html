@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konfirmasi Traktiran</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Konfirmasi Traktiran</h1>
+        <p>Apakah kamu yakin ingin menerima traktiran ini?</p>
+        <button class="confirm-popup-button" onclick="acceptTreat()">Ya, Terima Traktiran</button>
+        <button class="confirm-popup-button" onclick="declineTreat()">Tidak, Terima Kasih</button>
+    </div>
+    <div id="decline-popup" class="special-popup" style="text-align: center;">
+        <p>Kamu wajib Kasih Traktiran Ke Pembuat Ucapan Ini, TTD @Zora Wkwkwk.</p>
+        <button class="special-popup-button" onclick="confirmYes()">Ya</button>
+        <button class="special-popup-button" onclick="confirmNo()">Tidak</button>
+    </div>
+    <footer class="footer" style="position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); font-size: 10px; color: rgb(55, 33, 252); font-family: 'Poppins', sans-serif;">
+        <p>&copy; <span id="current-year"></span> Aksara. All rights reserved.</p>
+    </footer>
+    <script>
+        // Fungsi untuk menerima traktiran
+        function acceptTreat() {
+            window.location.href = "https://wa.me/6282220738427?text=Terima%20kasih%20atas%20traktirannya!";
+        }
+
+        // Fungsi untuk menolak traktiran
+        function declineTreat() {
+            document.getElementById('decline-popup').style.display = 'block';
+        }
+
+        // Fungsi untuk konfirmasi "Ya" pada popup penolakan
+        function confirmYes() {
+            window.location.href = "https://wa.me/6282220738427?text=Baiklah%20saya%20akan%20mentraktir%20kamu";
+        }
+
+        // Fungsi untuk konfirmasi "Tidak" pada popup penolakan
+        function confirmNo() {
+            var popup = document.getElementById('decline-popup');
+            var randomX = Math.floor(Math.random() * (window.innerWidth - popup.offsetWidth));
+            var randomY = Math.floor(Math.random() * (window.innerHeight - popup.offsetHeight));
+            var maxX = window.innerWidth - popup.offsetWidth;
+            var maxY = window.innerHeight - popup.offsetHeight;
+
+            popup.style.top = Math.max(0, Math.min(randomY, maxY)) + 'px';
+        }
+
+        // Fungsi untuk mengatur tahun saat ini di footer
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
