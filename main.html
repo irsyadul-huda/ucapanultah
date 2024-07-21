@@ -29,7 +29,7 @@
         </script>
         <button id="ucapan-button" class="popup-button" onclick="showPopup('Selamat Ulang Tahun! Semoga kamu tetap awet muda, meskipun umur terus bertambah!'); disableButtons()">Ucapan Dari Saya</button>
         <button id="doa-button" class="popup-button" onclick="showPopup('Doa terbaik untuk hari ulang tahunmu! Semoga panjang umur, sehat selalu, dan semoga kamu tetap bisa makan banyak tanpa khawatir berat badan!'); disableButtons()">Doa</button>
-        <button id="special-button" class="special-button" onclick="showSpecialPopup()">Tombol Istimewa</button>
+        <button id="special-button" class="special-button" onclick="proceedToConfrm(); disableButtons()">Tombol Istimewa</button>
         <div id="popup" class="popup">
             <p id="popup-message"></p>
             <button class="popup-close-button" onclick="closePopup()">Tutup</button>
@@ -41,7 +41,7 @@
         </div>
         <div id="confirm-popup" class="confirm-popup">
             <p>Apakah kamu yakin ingin mentraktir saya?</p>
-            <button class="confirm-popup-button" onclick="proceedToWhatsApp()">Terima Permintaan</button>
+            <button class="confirm-popup-button" onclick="proceedToConfrm2()">Terima Permintaan</button>
             <button class="confirm-popup-button" onclick="showNewPopup('Kamu wajib traktir saya!')">Tolak Permintaan</button>
         </div>
     </div>
@@ -86,9 +86,14 @@
             popup.style.top = Math.max(0, Math.min(randomY, maxY)) + 'px';
         }
 
-        // Fungsi untuk mengarahkan ke WhatsApp setelah konfirmasi
-        function proceedToWhatsApp() {
-            window.location.href = "https://wa.me/6282220738427?text=Baiklah%20saya%20akan%20mentraktir%20kamu";
+        // Fungsi untuk mengarahkan ke confrm.html setelah konfirmasi
+        function proceedToConfrm() {
+            window.location.href = "confrm.html";
+        }
+
+        // Fungsi untuk mengarahkan ke confrm2.html setelah konfirmasi
+        function proceedToConfrm2() {
+            window.location.href = "confrm2.html";
         }
 
         // Fungsi untuk mengatur tahun saat ini di footer dan mengatur posisi popup saat ukuran jendela berubah
