@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <button id="back-button" class="back-button" onclick="goBack()" style="position: absolute; top: 10px; left: 10px; background-color: #ff4081; color: white; font-family: 'Poppins', sans-serif; border: none; border-radius: 20px;">Back</button>
     <div class="card">
         <h1>Konfirmasi Traktiran</h1>
         <p>Apakah kamu yakin ingin menerima traktiran ini?</p>
-        <button id="accept-button" class="confirm-popup-button" onclick="acceptTreat()">Ya, Terima Traktiran</button>
-        <button id="decline-button" class="confirm-popup-button" onclick="declineTreat()">Tidak, Terima Kasih</button>
+        <button id="accept-button" class="confirm-popup-button" onclick="acceptTreat()">Kasih Traktiran</button>
+        <button id="decline-button" class="confirm-popup-button" onclick="declineTreat()">Tidak Kasih Traktiran</button>
     </div>
     <div id="decline-popup" class="special-popup" style="text-align: center;">
         <p>Kamu wajib Kasih Traktiran Ke Pembuat Ucapan Ini, TTD @Zora Wkwkwk.</p>
@@ -22,6 +23,11 @@
         <p>&copy; <span id="current-year"></span> Aksara. All rights reserved.</p>
     </footer>
     <script>
+        // Fungsi untuk kembali ke halaman main.html
+        function goBack() {
+            window.location.href = "main.html";
+        }
+
         // Fungsi untuk menerima traktiran
         function acceptTreat() {
             window.location.href = "https://wa.me/6282220738427?text=Terima%20kasih%20atas%20traktirannya!";
