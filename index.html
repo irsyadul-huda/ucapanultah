@@ -9,8 +9,13 @@
         header h1 {
             text-align: center;
             color: #ff4081;
-            font-size: 16px; /* Kurangi ukuran font untuk tampilan smartphone */
-            font-family: 'Comic Sans MS',;
+            font-size: 4vw; /* Gunakan ukuran font responsif */
+            font-family: 'Comic Sans MS';
+        }
+        header h3 {
+            text-align: center;
+            color: #ff4081;
+            font-size: 3vw; /* Gunakan ukuran font responsif */
         }
         .disabled-button {
             background-color: grey;
@@ -26,6 +31,21 @@
         }
         .card header {
             margin-bottom: 20px; /* Tambahkan jarak antara header dan input text */
+        }
+        input[type="text"] {
+            font-size: 3vw; /* Gunakan ukuran font responsif */
+            padding: 2vw; /* Gunakan padding responsif */
+            width: 80%; /* Sesuaikan lebar untuk tampilan smartphone */
+            max-width: 400px; /* Batasi lebar maksimum */
+        }
+        button {
+            font-size: 3vw; /* Gunakan ukuran font responsif */
+            padding: 2vw 4vw; /* Gunakan padding responsif */
+            width: 80%; /* Sesuaikan lebar untuk tampilan smartphone */
+            max-width: 400px; /* Batasi lebar maksimum */
+        }
+        footer p {
+            font-size: 2vw; /* Gunakan ukuran font responsif */
         }
     </style>
     <script>
@@ -46,20 +66,24 @@
             localStorage.setItem('name', nameInput);
             window.location.href = 'main.html';
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
     </script>
 </head>
 <body>
     <div class="center-content">
         <header>
             <h1>SELAMAT DATANG</h1>
-            <h3 style="color: #ff4081;">DI HALAMAN UCAPAN ULANG TAHUN</h3>
+            <h3>DI HALAMAN UCAPAN ULANG TAHUN</h3>
             <br>
         </header>
         <div class="card">
-            <input type="text" id="name-input" placeholder="Masukkan Nama" oninput="checkInput()" style="font-size: 14px; padding: 8px;"> <!-- Kurangi ukuran font dan tambahkan padding untuk tampilan smartphone -->
-            <button id="klik-saya-button" class="popup-button disabled-button" onclick="saveNameAndRedirect()" disabled style="font-size: 14px; padding: 8px 16px;">Klik Saya</button> <!-- Kurangi ukuran font dan tambahkan padding untuk tampilan smartphone -->
+            <input type="text" id="name-input" placeholder="Masukkan Nama" oninput="checkInput()">
+            <button id="klik-saya-button" class="popup-button disabled-button" onclick="saveNameAndRedirect()" disabled>Klik Saya</button>
         </div>
-        <footer class="footer" style="position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); font-size: 10px; color: rgb(55, 33, 252); font-family: 'Poppins', sans-serif;">
+        <footer class="footer" style="position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);">
             <p>&copy; <span id="current-year"></span> Aksara. All rights reserved.</p>
         </footer>
     </div>
