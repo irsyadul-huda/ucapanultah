@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konfirmasi Traktiran</title>
+    <title>Konfirmasi Kado</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <button id="back-button" class="back-button" onclick="goBack()" style="position: absolute; top: 10px; left: 10px; background-color: #ff4081; color: white; font-family: 'Poppins', sans-serif; border: none; border-radius: 20px;">Back</button>
     <div class="card">
-        <h1>Konfirmasi Traktiran</h1>
-        <p>Apakah kamu yakin ingin mentraktir SAYA Wkwkwkk?</p>
-        <button id="accept-button" class="confirm-popup-button" onclick="acceptTreat()">Kasih Traktiran</button>
-        <button id="decline-button" class="confirm-popup-button" onclick="declineTreat()">Tidak Kasih Traktiran</button>
+        <h1>Konfirmasi Kado</h1>
+        <p>Apakah kamu yakin ingin meminta Kado dari Phillo</p>
+        <button id="accept-button" class="confirm-popup-button" onclick="acceptTreat()">Minta Kado</button>
+        <button id="decline-button" class="confirm-popup-button" onclick="declineTreat()">Tidak Minta Kado</button>
     </div>
     <div id="decline-popup" class="special-popup" style="text-align: center;">
-        <p>Kamu wajib Kasih Traktiran Ke Pembuat Ucapan Ini, TTD @Zora Wkwkwk.</p>
+        <p>Bilang Ke Phillo, Mau Kado-nya</p>
         <button class="special-popup-button" onclick="confirmYes()">Ya</button>
         <button class="special-popup-button" onclick="confirmNo()">Tidak</button>
     </div>
@@ -30,7 +30,7 @@
 
         // Fungsi untuk menerima traktiran
         function acceptTreat() {
-            window.location.href = "https://wa.me/6282220738427?text=Terima%20kasih%20atas%20traktirannya!";
+            window.location.href = "https://wa.me/6282220738427?text=Minta%20Kado%20nya%20KePhilo";
         }
 
         // Fungsi untuk menolak traktiran
@@ -41,7 +41,7 @@
 
         // Fungsi untuk konfirmasi "Ya" pada popup penolakan
         function confirmYes() {
-            window.location.href = "https://wa.me/6282220738427?text=Baiklah%20saya%20akan%20mentraktir%20kamu";
+            window.location.href = "https://wa.me/6282220738427?text=Minta%20Kado%20nya%20KePhilo";
         }
 
         // Fungsi untuk konfirmasi "Tidak" pada popup penolakan

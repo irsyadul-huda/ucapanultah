@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ucapan Ulang Tahun</title>
+    <title>Ucapan Ulang Tahun Untukmu</title>
     <link rel="stylesheet" href="styles.css">
     <script>
         // Fungsi untuk mengarahkan ke halaman start.html jika nama belum disimpan di localStorage
@@ -17,8 +17,8 @@
 </head>
 <body>
     <div class="card">
-        <h1>Selamat Ulang Tahun!</h1>
-        <p>Semoga hari ini menjadi hari yang penuh kebahagiaan dan keceriaan untukmu <span id="name-placeholder"></span></p>
+        <h1>Ucapan Ini Untukmu</h1>
+        <p> Selamat Ulang Tahun Neng Maryam Sayangku ❤ </span></p>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 var name = localStorage.getItem('name');
@@ -27,15 +27,15 @@
                 }
             });
         </script>
-        <button id="ucapan-button" class="popup-button" onclick="showPopup('Selamat Ulang Tahun! Semoga kamu tetap awet muda, meskipun umur terus bertambah!'); disableButtons()">Ucapan Dari Saya</button>
-        <button id="doa-button" class="popup-button" onclick="showPopup('Doa terbaik untuk hari ulang tahunmu! Semoga panjang umur, sehat selalu, dan semoga kamu tetap bisa makan banyak tanpa khawatir berat badan!'); disableButtons()">Doa</button>
+        <button id="ucapan-button" class="popup-button" onclick="showPopup('Ya Allah, aku bersyukur Engkau mempertemukanku dengannya. Barakallah fii umrik, sayang. Semoga di hari istimewa ini, Allah mengabulkan semua doa-doamu. Engkau adalah anugerah terindah dalam hidupku. Selamat ulang tahun, calon pendamping hidupku.!'); disableButtons()">Ucapan Dari Saya</button>
+        <button id="doa-button" class="popup-button" onclick="showPopup('Doa terbaik untuk hari ulang tahunmu! Semoga semua masalahmu dipermudah dan diberikan ketabahan dalam menghadapi masalah!'); disableButtons()">Doa</button>
         <button id="special-button" class="special-button" onclick="proceedToConfrm(); disableButtons()">Tombol Istimewa</button>
         <div id="popup" class="popup">
             <p id="popup-message"></p>
             <button class="popup-close-button" onclick="closePopup()">Tutup</button>
         </div>
         <div id="special-popup" class="special-popup">
-            <p id="special-popup-message">Apakah kamu yakin ingin mentraktir saya?</p>
+            <p id="special-popup-message">Apakah kamu setuju Philo kasih kado ?</p>
             <button class="special-popup-button" onclick="confirmYes()">Ya</button>
             <button class="special-popup-button" onclick="confirmNo()">Tidak</button>
         </div>
