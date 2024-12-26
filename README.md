@@ -6,16 +6,6 @@
 
   <p style="font-size: 1.2em; max-width: 600px; margin: auto;">Perkenalkan, nama saya <strong>Irsyadul Huda</strong>. Saya adalah pendiri <strong>Aksara Desain</strong>, sebuah perusahaan yang bergerak di bidang desain kreatif. Kami di Aksara Desain menyediakan berbagai layanan profesional, termasuk pembuatan desain logo, desain grafis, dan editing video. Saya berkomitmen untuk memberikan solusi desain yang inovatif dan berkualitas tinggi kepada klien kami, guna membantu mereka mencapai tujuan visual dan branding yang diinginkan.</p>
 
-  <h2 style="font-size: 2em; color: #FF5722;">🚀 Teknologi dan Alat yang Saya Gunakan</h2>
-  <ul style="list-style-type: none; padding: 0; columns: 2;">
-    <li style="font-size: 1.2em;">HTML</li>
-    <li style="font-size: 1.2em;">CSS</li>
-    <li style="font-size: 1.2em;">JavaScript</li>
-    <li style="font-size: 1.2em;">Git</li>
-    <li style="font-size: 1.2em;">GitHub</li>
-    <li style="font-size: 1.2em;">VS Code</li>
-  </ul>
-
   <h2 style="font-size: 2em; color: #FF5722;">📈 Statistik GitHub Saya</h2>
   <img src="https://github-readme-stats.vercel.app/api?username=irsyadul-huda&show_icons=true&theme=radical" alt="Statistik GitHub" style="max-width: 100%; height: auto;">
 
