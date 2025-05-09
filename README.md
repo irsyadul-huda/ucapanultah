@@ -15,7 +15,7 @@
     <li style="font-size: 1.2em;">LinkedIn: <a href="https://www.linkedin.com/in/irsyadul-huda" style="color: #2196F3;">LinkedIn Saya</a></li>
   </ul>
 
-  <p style="font-size: 1.2em; max-width: 600px; margin: auto;">Terima kasih telah mengunjungi profil saya! Jangan ragu untuk menghubungi saya jika Anda ingin berkolaborasi atau hanya ingin mengobrol tentang teknologi.</p>
+  <p style="font-size: 1.2em; max-width: 600px; margin: auto;">Terima kasih telah mengunjungi profil saya.</p>
 </div>
 
 <!--
